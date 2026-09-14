@@ -1,43 +1,121 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <title>Bhumi Motors | Subhash Nagar, Delhi</title>
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Bhumi Motors - trusted second hand scooter and motorcycle dealer in Subhash Nagar, Delhi."
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <link rel="stylesheet" href="./site.css" />
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <header class="topbar">
+      <div class="container row between">
+        <div>
+          <h1>Bhumi Motors</h1>
+          <p>Second Hand Scooter Dealers in Subhash Nagar, Delhi</p>
+        </div>
+        <div class="actions">
+          <a class="btn btn-green" href="#contact">Show Number</a>
+          <a class="btn btn-outline" href="#contact">WhatsApp</a>
+        </div>
+      </div>
+    </header>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <main>
+      <section class="hero">
+        <div class="container grid hero-grid">
+          <article class="card">
+            <span class="tag">4.0 ★ • 69 Ratings</span>
+            <h2>Trusted Pre-Owned Scooters & Motorcycles in Delhi</h2>
+            <p>
+              Bhumi Motors quality second hand scooters aur Royal Enfield motorcycles provide karta hai.
+              Yahan buyer ko transparent information, smooth process aur practical guidance milti hai.
+            </p>
+            <div class="actions">
+              <a class="btn btn-dark" href="#photos">View Photos</a>
+              <a class="btn btn-outline-dark" href="#reviews">Read Reviews</a>
+            </div>
+          </article>
+          <aside class="card" id="contact">
+            <h3>Contact Details</h3>
+            <p>📍 Wz-5, Opposite Chatri Park, Subhash Nagar, Delhi-110027</p>
+            <p>🕘 Open till 9:00 PM (Mon-Sun: 9:30 AM - 9:00 PM)</p>
+            <p>🏷️ Brands: Hero, Royal Enfield</p>
+          </aside>
+        </div>
+      </section>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+      <section class="container stats">
+        <div class="stat"><small>Rating</small><strong>4.0 / 5</strong></div>
+        <div class="stat"><small>Reviews</small><strong>69 Ratings</strong></div>
+        <div class="stat"><small>Established</small><strong>2018</strong></div>
+        <div class="stat"><small>Hours</small><strong>9:30 AM - 9:00 PM</strong></div>
+      </section>
+
+      <section id="photos" class="container section">
+        <h3>Photos</h3>
+        <p class="muted">Listing categories based gallery preview.</p>
+        <div class="grid gallery">
+          <div class="photo-card"><div class="ph">All</div><h4>Scooter Collection</h4><small>20 Photos</small></div>
+          <div class="photo-card"><div class="ph">Exterior</div><h4>Showroom Exterior</h4><small>5 Photos</small></div>
+          <div class="photo-card"><div class="ph">Interior</div><h4>Office Interior</h4><small>4 Photos</small></div>
+          <div class="photo-card"><div class="ph">Vehicle</div><h4>Bike Line-up</h4><small>7 Photos</small></div>
+        </div>
+      </section>
+
+      <section class="section strip">
+        <div class="container grid two">
+          <article class="card">
+            <h3>Quick Information</h3>
+            <p class="muted">
+              Second hand scooter dealer showcasing quality second hand scooters and Royal Enfield motorcycles, while providing expert support for motorcycle buyers.
+            </p>
+            <ul>
+              <li>Second Hand Scooter</li>
+              <li>Second Hand Motorcycle</li>
+              <li>Royal Enfield Second Hand Motorcycle</li>
+              <li>Hero Second Hand Motorcycle</li>
+              <li>Honda Second Hand Scooter</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>About Bhumi Motors</h3>
+            <p class="muted">
+              Bhumi Motors Subhash Nagar, Delhi mein 2018 se customers ko serve kar raha hai. Opposite Chatri Park ke paas location hone ki wajah se shop easily accessible hai.
+            </p>
+            <p class="muted">
+              Customer-centric experience, practical pricing aur quick response is business ki major strength hai.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="reviews" class="container section">
+        <h3>Reviews & Ratings</h3>
+        <div class="rating-box"><span>4.0</span><div><b>69 Ratings</b><small> JD rating index based on ratings across web</small></div></div>
+        <h4>Recent Rating Trend</h4>
+        <div class="trend">
+          <span>4.0 ★</span><span>1.0 ★</span><span>5.0 ★</span><span>5.0 ★</span><span>3.0 ★</span><span>3.0 ★</span><span>1.0 ★</span><span>5.0 ★</span><span>5.0 ★</span>
+        </div>
+        <div class="grid two">
+          <article class="card"><h4>Priya Yadav <small>16 May 2025</small></h4><p class="muted">“Staff ka behavior decent tha, options achhe the aur process clear tha.”</p></article>
+          <article class="card"><h4>Stany Addicted <small>11 Nov 2023</small></h4><p class="muted">“Inventory wide hai, budget ke hisaab se practical option mil gaya.”</p></article>
+        </div>
+      </section>
+
+      <section class="container section">
+        <h3>Frequently Asked Questions</h3>
+        <details open><summary>Payment mode kya accept hota hai?</summary><p>Cash, Cheque aur Demand Draft available hain.</p></details>
+        <details><summary>Nearest landmark kya hai?</summary><p>Opposite Chatri Park, Wz-5, Subhash Nagar, Delhi-110027.</p></details>
+        <details><summary>Business hours kya hain?</summary><p>Monday se Sunday, 9:30 AM se 9:00 PM.</p></details>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container center">Bhumi Motors • Subhash Nagar • Delhi</div>
+    </footer>
   </body>
 </html>
