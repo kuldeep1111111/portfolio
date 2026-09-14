@@ -1,288 +1,151 @@
-/* ================= Global Settings ================= */
+:root {
+  --bg: #f4f6f8;
+  --card: #ffffff;
+  --line: #dfe3e8;
+  --text: #101828;
+  --muted: #667085;
+}
+
 body {
-  font-family: 'Arial', sans-serif;
   margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+.bm-header {
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+}
+
+.bm-title {
+  font-size: 1.65rem;
+  font-weight: 700;
+}
+
+.bm-subtitle {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.bm-hero {
+  background: linear-gradient(170deg, #ecfdf3 0%, #ffffff 55%);
+}
+
+.panel {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.1rem 1.15rem;
+  box-shadow: 0 8px 20px rgba(16, 24, 40, 0.05);
+}
+
+.stat-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.8rem;
+}
+
+.stat-card small {
+  color: var(--muted);
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+.section-title {
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.gallery-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.8rem;
+}
+
+.gallery-placeholder {
+  height: 130px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(120deg, #111827, #334155);
+}
+
+.info-strip {
+  background: #eef2f6;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.list-clean {
+  list-style: none;
   padding: 0;
-  background-color: #f5f7fb;
-  color: #222c57;
-  scroll-behavior: smooth;
 }
 
-a {
-  text-decoration: none;
+.list-clean li {
+  margin-bottom: 0.6rem;
 }
 
-/* ================= Header / Navbar ================= */
-.navbar {
-  background-color: #000 !important; /* Black header */
-  padding: 1rem 0;
-}
-
-.navbar .nav-link {
-  color: #fff !important;
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-}
-
-.navbar .nav-link:hover {
-  color: #497BFF !important;
-}
-
-.navbar-brand {
-  color: #fff !important;
-  font-size: 1.6rem;
-  font-weight: 700;
-}
-
-/* ================= Hero Section ================= */
-.hero-section {
-  position: relative;
-  height: 80vh;
-  display: flex;
+.review-summary {
+  display: inline-flex;
+  gap: 0.75rem;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  background: linear-gradient(135deg, #1B237E, #497BFF);
-  color: #fff;
-  padding: 20px;
-  overflow: hidden;
-}
-
-.blob-container {
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  mix-blend-mode: screen;
-}
-
-.hero-text {
-  position: relative;
-  z-index: 2;
-  max-width: 600px;
-}
-
-.hero-title {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 15px;
-}
-
-.hero-subtitle {
-  font-size: 1.3rem;
-  margin-bottom: 30px;
-}
-
-.hero-section .btn {
-  padding: 12px 25px;
-  font-weight: 600;
-  font-size: 1.1rem;
-}
-
-/* ================= About Section ================= */
-.about-section {
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.about-section h2 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-/* ================= Skills Section ================= */
-.skills-section {
-  padding: 80px 20px;
-  text-align: center;
-  background-color: #f5f7fb;
-}
-
-.skills-section h2 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 40px;
-}
-
-.skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px; /* Space between each skill card */
-}
-
-.skill-card {
-  background-color: #497BFF;
-  color: #fff;
+  border: 1px solid var(--line);
   border-radius: 12px;
-  padding: 20px 30px;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: default;
-      margin: 0px 10px 0px 0px;
+  background: #fff;
+  padding: 0.8rem 1rem;
 }
 
-.skill-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(73, 123, 255, 0.3);
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .skill-card {
-    padding: 15px 20px;
-    font-size: 0.9rem;
-  }
-}
-/* ================= Services Section ================= */
-.service-card-yellow {
-  background-color: #fff7d9;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 6px 25px rgba(50, 54, 90, 0.07);
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card-yellow:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 35px rgba(46, 58, 153, 0.15);
-}
-
-.service-card-yellow h5 {
-  margin-top: 10px;
-}
-
-.service-card-yellow p {
-  flex-grow: 1;
-  margin-top: 10px;
-}
-
-.service-card-yellow .btn {
-  margin-top: auto;
-  font-weight: 600;
-}
-
-/* Services CTA */
-#services .text-center p {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-#services .text-center ul li {
-  font-size: 1rem;
-  margin: 5px 0;
-  list-style-type: disc;
-  margin-left: 1rem;
-}
-
-/* ================= Projects Section ================= */
-.project-card {
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 6px 25px rgba(50, 54, 90, 0.07);
-  color: #222c57;
-  transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(46, 58, 153, 0.18);
-}
-
-/* ================= Pricing Section ================= */
-#pricing {
-  padding: 80px 20px;
-  text-align: center;
-  background-color: #f5f7fb;
-}
-
-#pricing h2 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-#pricing h3 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-/* ================= Footer / Contact Section ================= */
-#contact {
-  padding: 80px 20px;
-  background-color: #000; /* Black footer */
+.score {
+  background: #15803d;
   color: #fff;
-  text-align: center;
-}
-
-#contact h2 {
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 30px;
+  border-radius: 12px;
+  line-height: 1;
+  padding: 0.55rem 0.7rem;
 }
 
-#contact p {
-  margin-bottom: 15px;
-  font-size: 1.1rem;
+.trend-pill {
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 999px;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.9rem;
 }
 
-#contact form input,
-#contact form textarea {
-  border-radius: 8px;
-  margin-bottom: 15px;
-  padding: 12px;
+.faq-item {
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 10px;
+  padding: 0.75rem 0.9rem;
+  margin-bottom: 0.65rem;
 }
 
-#contact .btn-light {
-  background-color: #497BFF;
-  color: #fff;
+.faq-item summary {
+  cursor: pointer;
   font-weight: 600;
-  border-radius: 8px;
-  padding: 12px 25px;
-  transition: background 0.3s ease;
 }
 
-#contact .btn-light:hover {
-  background-color: #1B237E;
+.bm-footer {
+  background: #fff;
+  border-top: 1px solid var(--line);
 }
 
-/* ================= Global Section Spacing ================= */
-section {
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
-
-/* ================= Responsive ================= */
-@media (max-width: 992px) {
-  .hero-title {
-    font-size: 2.5rem;
-  }
-  .hero-subtitle {
-    font-size: 1.2rem;
-  }
+.bm-footer small {
+  color: var(--muted);
 }
 
 @media (max-width: 768px) {
-  .hero-title {
-    font-size: 2rem;
-  }
-  .hero-subtitle {
-    font-size: 1rem;
+  .bm-title {
+    font-size: 1.35rem;
   }
 
-  .skill-card {
-    margin-bottom: 15px;
-  }
-
-  .service-card-yellow {
-    margin-bottom: 20px;
+  .gallery-placeholder {
+    height: 100px;
   }
 }
